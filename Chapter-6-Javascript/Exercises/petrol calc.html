@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <style>
+        /* for the body to be style */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #903e3e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* style for our container */
+        .container {
+            background-color: #2f1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        /* style for heading */
+        h1 {
+            color: #fffdfd;
+        }
+        /* Styles for the input group */
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Styles for the input fields when focused */
+        .input-group label {
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .input-group input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 150px;
+            outline: none;
+        }
+
+        /* Styles for the calculate button */
+        #calculateBtn {
+            padding: 10px 20px;
+            background-color: #326eaf;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* Styles for the total cost paragraph */
+        #totalCost {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the calculator -->
+    <div class="container">
+        <h1>Petrol Calculator</h1>
+        <div class="input-group">
+        <!-- Input group for cost per liter -->
+            <label for="cost">Cost per liter (in Aed):</label>
+            <input type="number" id="cost" step="0.01" value="1.72" placeholder="Enter cost per liter" autofocus>
+        </div>
+
+        <!-- Input group for liters purchased -->
+        <div class="input-group">
+            <label for="liters">Liters purchased:</label>
+            <input type="number" id="liters" step="0.01" value="0" placeholder="Enter number of liters">
+        </div>
+        <button id="calculateBtn">Calculate</button>
+        <p id="totalCost"></p>
+    </div>
+
+    <!-- JavaScript to calculate and display total cost -->
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            // Get the values from the input fields
+            var costPerLiter = parseFloat(document.getElementById('cost').value);
+            var litersPurchased = parseFloat(document.getElementById('liters').value);
+
+            // Calculate the total cost
+            var totalCost = costPerLiter * litersPurchased;
+
+            // Display the total cost
+            document.getElementById('totalCost').textContent = "Total Cost: Aed " + totalCost.toFixed(2);
+        });
+    </script>
+</body>
+</html>
