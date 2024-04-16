@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling those divs</title>
+    <style>
+        div {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 20px;
+            margin: 25px;
+            line-height: 100px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: white;
+            border: 5px solid rgb(249, 154, 0);
+            }
+
+        body {
+            margin: 100px auto;
+            width: max-content;
+             }
+        #A {
+            border-color: rgb(180, 29, 194); 
+            box-shadow: 10px 10px 7px 0px rgba(223, 36, 36, 0.9); 
+             }
+        #B {
+            border-color: rgb(2, 215, 45); 
+            box-shadow: inset 10px 10px 7px 0px rgba(0, 0, 0, 0.9); /* Inner shadow */
+            }
+        #C {
+            border-radius: 15px;
+            box-shadow: 
+                0 0 0 8px rgb(55, 0, 255), /* First border */
+                0 0 0 17px rgb(255, 0, 0), /* Second border */ 
+                0 0 0 26px rgb(11, 79, 0); /* third border */
+           }
+        #D span {
+            border-color: rgb(114, 33, 33);
+            text-shadow: 5px 5px 1px rgb(0, 0, 0); /* Text shadow below the word */
+           }
+    </style>
+</head>
+<body>
+    <div id="A">div#A</div>
+    <div id="B">div#B</div>
+    <div id="C">div#C</div>
+    <div id="D"><span>div#D</span></div>
+</body>
+</html>
+
+
+
+
+
